@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Variable {
-    static String BNBAdress = "";//"bnb1wwy2ntxdpr2ezrav752c8mah90qyyzg7prnvav";// "";//"bnb1wwy2ntxdpr2ezrav752c8mah90qyyzg7prnvav";
+    static String BNBAdress = "";
     static String BaseUrl = "https://dex.binance.org/api/v1/";
     static String GetAccount = BaseUrl+"account/"+BNBAdress;
     static String GetDepth = BaseUrl+"depth?symbol=";

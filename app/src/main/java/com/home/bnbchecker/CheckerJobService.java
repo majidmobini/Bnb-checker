@@ -138,8 +138,8 @@ public class CheckerJobService extends JobService {
 
     private void ckekBotStatus()
     {
-        //https://dex.binance.org/api/v1/orders/open?address=bnb1wwy2ntxdpr2ezrav752c8mah90qyyzg7prnvav
-        String GetOpened = BaseUrl + "orders/open?address=bnb16l42z0ms00a7az2dy5rc43pu56c7928z373n07";
+        //https://dex.binance.org/api/v1/orders/open?address=bnbAdress
+        String GetOpened = BaseUrl + "orders/open?address=bnbAdress";
         Context ctx = this;
         OrderList opens = new OrderList();
         Log.i("MyTestService", "Service 1");

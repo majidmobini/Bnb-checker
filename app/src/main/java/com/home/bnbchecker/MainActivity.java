@@ -86,14 +86,7 @@ public class MainActivity extends AppCompatActivity {
         Variable.BNBAdress = etAdress.getText().toString().trim().split(";")[0];
         Variable.SetBnbAddress(Variable.BNBAdress);
         tvCoin = findViewById(R.id.tvCoin);
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                String dadaa = GetClass.GetData("https://us-central1-glo3d-c338b.cloudfunctions.net/createCheckoutSession?user_id=cujMZGmSWwPHCdFOnm43Ogl95713&sub_price_id=price_1KNAhMIKOPdwmPxlrtiQwLBA&credit_price_id=price_1KNAyqIKOPdwmPxlW9AYGKUH");
-                Log.d("Test",dadaa);
-
-            }
-        }).start();
+        
 
 
         tvCoin.addTextChangedListener(new TextWatcher() {
@@ -772,8 +765,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void ckekBotStatus()
     {
-        //https://dex.binance.org/api/v1/orders/open?address=bnb1wwy2ntxdpr2ezrav752c8mah90qyyzg7prnvav
-        String GetOpened = BaseUrl + "orders/open?address=bnb16l42z0ms00a7az2dy5rc43pu56c7928z373n07";
+        //https://dex.binance.org/api/v1/orders/open?address=bnbAdress
+        String GetOpened = BaseUrl + "orders/open?address=bnbAdress";
         Context ctx = this;
         OrderList opens = new OrderList();
         Log.i("MyTestService", "Service 1");
